@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Energy Management</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/14dab1683c.js" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="C:\Users\arunk\OneDrive\Desktop\DS Project\static\styles.css"> -->
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'styles.css')}}">
+  </head>
+  <body>
+    <h1 class="display-5"><i class="fas fa-lightbulb"></i> Medical sample collection</h1> <br><br>
+
+    <div class="container mb-3"><hr>
+      <form class="" action="{{url_for("prediction")}}" method="post">
+        <!-- running chain Motors Input -->
+          <label for="AgentID">Enter AgentID : </label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;
+            <input step="1" min="1" max="100" type="number" name="AgentID" placeholder="Enter AgentID"><br><br>
+
+        <div class="input-field col s4">
+             <label for="patient_location"><b>Select the name of the patient_location</b></label>
+             <select id="patient_location" name="patient_location">
+             <option value="0">Ramachandrapuram</option>
+             <option value="1">Miyapur</option>
+             <option value="2">Kukatpally</option>
+             <option value="3">Jagathgiri Gutta</option>
+             <option value="4">Gachibowli</option>
+             <option value="5">Nanakaramguda</option>
+             <option value="6">Rodamestri Nagar</option>
+             <option value="7">Hafeezpet</option>
+             <option value="8">Vasantha Nagar</option>
+             <option value="9">Pocharam</option>
+             </select>
+             <br><br>                         
+         </div>
+
+         <div class="input-field col s4">
+             <label for="DiagnosticCenters"><b>Select the name of the DiagnosticCenters</b></label>
+             <select id="DiagnosticCenters" name="DiagnosticCenters">
+             <option value="0">Medquest Diagnostics Center</option>
+             <option value="1">Vijaya Diagnostic Center</option>
+             <option value="2">Pronto Diagnostics Center</option>
+             <option value="3">Sri Sai Diagnostic Center</option>
+             <option value="4">Tesla Diagnostics</option>
+             <option value="5">Diamond Diagnostic Center</option>
+             <option value="6">Apollo Diagnostics</option>
+             <option value="7">Medifine Diagnostic Center</option>
+             <option value="8">Vivaa Diagnostic Center</option>
+             <option value="9">Lucid Medical Diagnostics</option>
+             </select>
+             <br><br>                         
+         </div>
+
+        <!-- shortest_distance_Agent_Pathlab -->
+          <label for="shortest_distance_Agent_Pathlab">Enter shortest_distance_Agent_Pathlab : </label>&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;
+          <input type="number" name="shortest_distance_Agent_Pathlab"  placeholder="Enter shortest_distance_Agent_Pathlab)"><br><br>
+
+        <!-- shortest_distance_Patient_Pathlab -->
+          <label for="shortest_distance_Patient_Pathlab">Enter shortest_distance_Patient_Pathlab :</label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;
+          <input type="number" name="shortest_distance_Patient_Pathlab"  placeholder="Enter shortest_distance_Patient_Pathlab"><br><br>
+
+        <!-- shortest_distance_Patient_Agent -->
+          <label for="shortest_distance_Patient_Agent">Enter shortest_distance_Patient_Agent : </label>&nbsp;&nbsp;&nbsp;
+          <input type="number" name="shortest_distance_Patient_Agent" placeholder="Enter shortest_distance_Patient_Agent"><br><br>
+
+        <!-- Availabilty_time -->
+          <label for="Availabilty_time">Enter shortest_distance_Patient_Agent : </label>&nbsp;&nbsp;&nbsp;
+          <input type="number" name="Availabilty_time" placeholder="Enter Availabilty_time"><br><br>
+
+        <!-- Age  -->
+          <label for="Age">Enter Age : </label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+          <input type="number" name="Age" step="1" min="2" max="99" placeholder="Enter Age"><br><br>
+
+         <div class="input-field col s4">
+             <label for="Gender"><b>Select the name of the Gender</b></label>
+             <select id="Gender" name="Gender">
+             <option value="0">Female</option>
+             <option value="1">Male</option>
+             </select>
+             <br><br>                         
+         </div>
+
+         <div class="input-field col s4">
+             <label for="test_name"><b>Select the name of the test</b></label>
+             <select id="test_name" name="Test_Name">
+             <option value="0">Acute kidney profile</option>
+             <option value="1">CBC</option>
+             <option value="2">Complete Urinalysis</option>
+             <option value="3">Fasting blood sugar</option>
+             <option value="4">H1N1</option>
+             <option value="5">HbA1c</option>
+             <option value="6">Lipid Profile</option>
+             <option value="7">RTPCR</option>
+             <option value="8">TSH</option>
+             <option value="9">Vitamin D-25Hydroxy</option>
+             </select>
+             <br><br>                         
+         </div>
+
+        <div class="input-field col s4">
+             <label for="sample_type"><b>Select the type of the sample</b></label>
+             <select id="sample_type" name="Sample">
+             <option value="0">Blood</option>
+             <option value="1">Swab</option>
+             <option value="2">Urine</option>
+             </select>
+             <br><br>            
+         </div>
+
+
+        <div class="input-field col s4">
+             <label for="Way_Of_Storage_Of_Sample"><b>Select the type of the sample</b></label>
+             <select id="Way_Of_Storage_Of_Sample" name="Way_Of_Storage_Of_Sample">
+             <option value="0">Disposable plastic container</option>
+             <option value="1">Urine culture transport tube</option>
+             <option value="2">Vaccum blood collection tube</option>
+             </select>
+             <br><br>            
+         </div>
+
+                 <!-- Time_For_Sample_Collection_MM -->
+          <label for="Time_For_Sample_Collection_MM">Enter Time_For_Sample_Collection_MM : </label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input type="number" name="Time_For_Sample_Collection_MM"  placeholder="Enter Time_For_Sample_Collection_MM"><br><br>
+         
+        <!-- Time_Agent_Pathlab_sec -->
+          <label for="Time_Agent_Pathlab_sec">Enter Time_Agent_Pathlab_sec : </label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input type="number" name="Time_Agent_Pathlab_sec"  placeholder="Enter Time_Agent_Pathlab_sec"><br><br>
+
+          <!-- button -->
+            <button type="submit" class="ExactArrivalTime">ExactArrivalTime</button>
+            <h1 class="navbar-brand">{{ output }}</h1>
+
+      </form>
+
+    </div>
+  </body>
+</html> 
