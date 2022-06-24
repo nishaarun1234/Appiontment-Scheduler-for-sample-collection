@@ -10,3 +10,5 @@ Jinja2==2.11.3
 MarkupSafe==2.0.1
 itsdangerous==1.1.0
 Werkzeug==1.0.1
+duolingo-api==0.3
+simplejson==3.8.2
