@@ -58,20 +58,47 @@
          </div>
 
         <!-- shortest_distance_Agent_Pathlab -->
-          <label for="shortest_distance_Agent_Pathlab">Enter shortest_distance_Agent_Pathlab : </label>&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;
+          <label for="shortest_distance_Agent_Pathlab">Enter shortest_distance_Agent_Pathlab in meters: </label>&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;
           <input type="number" name="shortest_distance_Agent_Pathlab"  placeholder="Enter shortest_distance_Agent_Pathlab)"><br><br>
 
         <!-- shortest_distance_Patient_Pathlab -->
-          <label for="shortest_distance_Patient_Pathlab">Enter shortest_distance_Patient_Pathlab :</label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&emsp;
+          <label for="shortest_distance_Patient_Pathlab">Enter shortest_distance_Patient_Pathlab in meters :</label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;
           <input type="number" name="shortest_distance_Patient_Pathlab"  placeholder="Enter shortest_distance_Patient_Pathlab"><br><br>
 
         <!-- shortest_distance_Patient_Agent -->
-          <label for="shortest_distance_Patient_Agent">Enter shortest_distance_Patient_Agent : </label>&nbsp;&nbsp;&nbsp;
+          <label for="shortest_distance_Patient_Agent">Enter shortest_distance_Patient_Agent in meters: </label>&nbsp;&nbsp;&nbsp;
           <input type="number" name="shortest_distance_Patient_Agent" placeholder="Enter shortest_distance_Patient_Agent"><br><br>
 
-        <!-- Availabilty_time -->
-          <label for="Availabilty_time">Enter shortest_distance_Patient_Agent : </label>&nbsp;&nbsp;&nbsp;
-          <input type="number" name="Availabilty_time" placeholder="Enter Availabilty_time"><br><br>
+         <div class="Time_slot">
+             <label for="Time_slot"><b>Select Time_slot</b></label>
+             <select id="Time_slot" name="Time_slot">
+             <option value="0">06:00 to 21:00 (Home)</option>
+             <option value="1">19:00 to 22:00 (working person)</option>
+             <option value="2">06:00 to 18:00 (Collect at work place)</option>
+             </select>
+             <br><br>                         
+         </div>
+
+         <div class="Availabilty time">
+             <label for="Availabilty time"><b>Select Availabilty time</b></label>
+             <select id="Availabilty time" name="Availabilty time">
+             <option value="0">06:00 to 07:00</option>
+             <option value="1">07:00 to 08:00</option>
+             <option value="2">08:00 to 09:00</option>
+             <option value="2">09:00 to 10:00</option>
+             <option value="2">10:00 to 11:00</option>
+             <option value="2">11:00 to 12:00</option>
+             <option value="2">12:00 to 13:00</option>
+             <option value="2">13:00 to 14:00</option>
+             <option value="2">14:00 to 15:00</option>
+             <option value="2">15:00 to 16:00</option>
+             <option value="2">16:00 to 17:00</option>
+             <option value="2">17:00 to 18:00</option>
+             <option value="2">18:00 to 19:00</option>
+             <option value="2">19:00 to 20:00</option>
+             </select>
+             <br><br>                         
+         </div>
 
         <!-- Age  -->
           <label for="Age">Enter Age : </label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
@@ -115,7 +142,7 @@
 
 
         <div class="input-field col s4">
-             <label for="Way_Of_Storage_Of_Sample"><b>Select the type of the sample</b></label>
+             <label for="Way_Of_Storage_Of_Sample"><b>Select Way_Of_Storage_Of_Sample</b></label>
              <select id="Way_Of_Storage_Of_Sample" name="Way_Of_Storage_Of_Sample">
              <option value="0">Disposable plastic container</option>
              <option value="1">Urine culture transport tube</option>
@@ -132,6 +159,26 @@
           <label for="Time_Agent_Pathlab_sec">Enter Time_Agent_Pathlab_sec : </label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
           <input type="number" name="Time_Agent_Pathlab_sec"  placeholder="Enter Time_Agent_Pathlab_sec"><br><br>
 
+         <div class="Agent arrival time">
+             <label for="Availabilty time"><b>Select Agent arrival time</b></label>
+             <select id="Agent arrival time" name="Agent arrival time">
+             <option value="0">06:00 to 07:00</option>
+             <option value="1">07:00 to 08:00</option>
+             <option value="2">08:00 to 09:00</option>
+             <option value="2">09:00 to 10:00</option>
+             <option value="2">10:00 to 11:00</option>
+             <option value="2">11:00 to 12:00</option>
+             <option value="2">12:00 to 13:00</option>
+             <option value="2">13:00 to 14:00</option>
+             <option value="2">14:00 to 15:00</option>
+             <option value="2">15:00 to 16:00</option>
+             <option value="2">16:00 to 17:00</option>
+             <option value="2">17:00 to 18:00</option>
+             <option value="2">18:00 to 19:00</option>
+             <option value="2">19:00 to 20:00</option>
+             </select>
+             <br><br>                         
+         </div>
           <!-- button -->
             <button type="submit" class="ExactArrivalTime">ExactArrivalTime</button>
             <h1 class="navbar-brand">{{ output }}</h1>
